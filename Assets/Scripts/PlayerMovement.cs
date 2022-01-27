@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             animator.speed = 1;
         }
 
-        rb.MovePosition((Vector2)transform.position + (move * Speed * Time.deltaTime));
+        rb.MovePosition((Vector2)transform.position + (move * (Speed * 10) * Time.deltaTime));
     }
 
     public void Die()
@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         Dead = true;
         animator.speed = 1;
         animator.SetBool("Dead", Dead);
+        SoundManager.Play("Death");
 
         StartCoroutine(ResetAfterTime());
     }

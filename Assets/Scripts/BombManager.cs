@@ -29,6 +29,7 @@ public class BombManager : MonoBehaviour
     {
         Vector3 gridPos = ObstaclesMap.GetCellCenterLocal(cellPos);
         Bomb.Create(BombObject, gridPos);
+        SoundManager.Play("BombPlace");
     }
 
     public void Explode()

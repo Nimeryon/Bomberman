@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -238,6 +239,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 540c3779347d5c04e833e5a53c6597c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - Clip: {fileID: 8300000, guid: 0c57179598cfcd24d847fc9715a4c765, type: 3}
+    Source: {fileID: 0}
+    Name: Explosion
+  - Clip: {fileID: 8300000, guid: ad259f9657d26ff4b924e93c82291be2, type: 3}
+    Source: {fileID: 0}
+    Name: Death
+  - Clip: {fileID: 8300000, guid: 334f991022998684d9350b92cc510905, type: 3}
+    Source: {fileID: 0}
+    Name: BoxBreak
+  - Clip: {fileID: 8300000, guid: 8d578815f71f77a4a873cb12cc728224, type: 3}
+    Source: {fileID: 0}
+    Name: BombPlace
 --- !u!1 &614721508
 GameObject:
   m_ObjectHideFlags: 0
@@ -5027,7 +5053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02705789178c3524f886d185e41b3e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 25
+  Speed: 10
   Dead: 0
   PLayerMask:
     serializedVersion: 2

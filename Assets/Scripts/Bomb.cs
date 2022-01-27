@@ -47,6 +47,8 @@ public class Bomb : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
         Vector3Int gridPos = new Vector3Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.y), 0);
         SetExplosionTile(gridPos, Explosion.ExplosionType.Middle, Vector3Int.up);
+
+        SoundManager.Play("Explosion");
     }
 
     private IEnumerator DestroyBomb()
@@ -136,6 +138,8 @@ public class Bomb : MonoBehaviour
                 BombManager.Instance.ObstaclesMap.SetTile(gridPos, null);
                 SetExplosionTile(gridPos, Explosion.ExplosionType.Side, direction);
                 SetDone(direction);
+
+                SoundManager.Play("BoxBreak");
                 break;
 
             case ObstacleType.None:
